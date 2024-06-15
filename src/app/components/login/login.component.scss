@@ -1,0 +1,40 @@
+.loginPanel{
+    margin-top: 150px;
+     height: 100%;
+     width: 50%;
+     outline: dashed 1px #d85d5d;
+    
+     .header{
+         background-color: #ffc0cb;
+         width: 100%;
+         height: 35%;
+         span{
+             display: flex;
+             justify-content: center;
+             font-size: x-large;
+             font-family: cursive;
+             color: #d85d5d;
+         }
+     }
+    .loginFormContent{
+     input{
+         margin-left: 10px;
+     }
+     button{
+         background-color: #ffc0cb;
+         color: white;
+         border: none;
+     }
+     display: flex;
+     justify-content: center;
+     margin: 10px 12px 10px 12px;
+     padding: 10px 10px 10px 10px;
+    }
+    .registerLink{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+     
+     
+ }

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="loginPanel" *ngIf="!showRegisterForm">
+      <div class="header"><span>Login</span></div>
+      <form [formGroup]="loginForm" (ngSubmit)="doLogin()" autocomplete="off">
+  
+        <div class="loginFormContent">
+          <label for="email">Email : </label>
+          <input formControlName="email" type="text"  id="email" />
+        </div>
+        <div class="loginFormContent">
+          <label for="password">Password : </label>
+          <input formControlName="password" type="password" id="password" />
+        </div>
+        <div class="loginFormContent">
+          <button type="submit" [disabled]="isFormValid()">Login &#8594;</button>
+        </div>
+      </form>
+      <div class="registerLink">
+        <a href="javascript:void(0)" (click)="showRegister()">Register</a>
+      </div>
+    </div>
+
+    <!--Register Form-->
+    <div class="loginPanel" *ngIf="showRegisterForm">
+      <div class="header"><span>Register</span></div>
+      <form [formGroup]="registerForm" (ngSubmit)="doRegister()" autocomplete="off">
+  
+        <div class="loginFormContent">
+          <label for="email">Name : </label>
+          <input formControlName="name" type="text"  id="name" />
+        </div>
+        <div class="loginFormContent">
+          <label for="email">Email : </label>
+          <input formControlName="email" type="text"  id="email" autocomplete="username" />
+        </div>
+        <div class="loginFormContent">
+          <label for="password">Password : </label>
+          <input formControlName="password" type="password" id="password" autocomplete="new-password" />
+        </div>
+        <div class="loginFormContent">
+          <button type="submit" [disabled]="isFormValid()">Register &#8594;</button>
+        </div>
+      </form>
+    </div>
+</div>
